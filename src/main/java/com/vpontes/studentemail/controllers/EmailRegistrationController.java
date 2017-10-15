@@ -19,11 +19,6 @@ import com.vpontes.studentemail.services.StudentService;
 @Controller
 public class EmailRegistrationController {
 
-	/*
-	 * @InitBinder protected void initBinder(WebDataBinder binder) {
-	 * binder.setValidator(new EmailRegistrationFormValidator()); }
-	 */
-
 	@RequestMapping(value = "/emailRegistration", method = RequestMethod.GET)
 	public String index(Map<String, Object> model, RedirectAttributes redirectattributes) {
 

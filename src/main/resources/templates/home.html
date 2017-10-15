@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1"></meta>
+<meta charset="UTF-8"></meta>
 <title>Criar UFFMail</title>
+	<div th:replace="fragments/header"/>
 </head>
+
 <body>
-	<h1>Digite sua matricula</h1>
-	<form action="#" th:action="@{/createUFFMail}" th:object="${enrollcodeForm}" method="post">
-		<table>
-			<tr>
-				<td>Matricula:</td>
-				<p th:text="#{home.welcome}"></p>
-				<td><input type="text" th:field="*{enrollcode}" /></td>
-				<td th:if="${#fields.hasErrors('enrollcode')}" th:errors="*{enrollcode}">Title error message</td>
-			</tr>
-			<tr>
-				<td><button type="submit">Enviar</button></td>
-			</tr>
-		</table>
-	</form>
+	<div class="container">
+
+		<div>
+			<h1>
+				Cadastro UFFMail <small> Dev</small>
+			</h1>
+
+			<p th:text="#{home.welcome}"></p>
+		</div>
+
+		<div>
+			<form action="#" th:action="@{/createUFFMail}"
+				th:object="${enrollcodeForm}" method="post">
+				<div class="form-group">
+        			<label for="inputFile">Matrícula</label>
+						<input type="text" id="inputFile" class="textfield" value=""
+							th:field="*{enrollcode}"
+							onkeydown="return isNumber(event)" />
+						<!--<td th:if="${#fields.hasErrors('enrollcode')}" th:errors="*{enrollcode}">Title error message</td>  -->
+						
+        		<button type="submit" class="btn btn-default">Enviar</button>
+    			</div>
+				<div class="alert alert-danger alert-dismissible fade show"
+					role="alert" th:if="${#fields.hasErrors('enrollcode')}">
+					<button type="button" class="close" data-dismiss="alert"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<a th:errors="*{*}"></a>
+				</div>
+			</form>
+		</div>
+		
+	</div>
+	
+	<div th:replace="fragments/footer :: footer"/>
+	
 </body>
 </html>

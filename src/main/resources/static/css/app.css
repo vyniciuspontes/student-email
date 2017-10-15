@@ -1,0 +1,16 @@
+.container {
+
+	padding-top = 30px;
+  	max-width: 500px;
+}
+
+.container div h1{
+  padding-top:70px
+}
+
+.container div{
+	
+  	margin-bottom: 20px;
+}
+
+

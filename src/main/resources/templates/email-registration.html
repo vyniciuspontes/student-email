@@ -2,26 +2,29 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1"></meta>
+<div th:replace="fragments/header" />
 <title>Email Register</title>
 </head>
 <body>
-	<h1>Cadastre Seu Email</h1>
-	<form action="#" th:action="@{/registerUFFMail}" th:object="${emailRegistrationForm}" method="post">
-		<table>
-			<tr>
-				<td>Email:</td>
-				<select th:field="*{selectedEmail}">
-				  <option th:each="email : *{emailSuggestions}" 
-				          th:value="${email}" 
-				          th:text="${email}">Wireframe</option>
-				</select>
+	<div class="container">
+		<div>
+			<h1>Cadastre Seu Email</h1>
+		</div>
+		<div>
+			<form action="#" th:action="@{/registerUFFMail}"
+				th:object="${emailRegistrationForm}" method="post">
+				<div class="form-group">
+				<label for="selectEmail">Selecione um email</label> <select style="width: 300px"
+					class="form-control" id="selectEmail" th:field="*{selectedEmail}">
+					<option th:each="email : *{emailSuggestions}" th:value="${email}"
+						th:text="${email}">Wireframe</option>
+				</select> 
+				<button type="submit" class="btn btn-default" style="margin-top: 20px">Enviar</button>
 				<input type="hidden" th:field="*{enrollcode}" />
-			</tr>
-			<tr>
-				<td><button type="submit">Submit post</button></td>
-			</tr>
-		</table>
-	</form>
-	
+				</div>
+			</form>
+		</div>
+	</div>
+	<div th:replace="fragments/footer :: footer"/>
 </body>
 </html>

@@ -3,12 +3,20 @@
 <head>
 <meta charset="utf-8" />
 <title>Sucesso</title>
+<div th:replace="fragments/header" />
 </head>
 <body>
-	<h1>Pronto !</h1>
+	<div class="container">
 
-	<p th:utext="#{success.message(${user.name}, ${user.uffmail}, ${user.phone})}"></p>
+		<div>
 
-	
+			<h1>Pronto !</h1>
+
+			<p
+				th:utext="#{success.message(${user.name}, ${user.uffmail}, ${user.phone})}"></p>
+		</div>
+	</div>
+
+	<div th:replace="fragments/footer :: footer" />
 </body>
 </html>

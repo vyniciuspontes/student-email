@@ -22,13 +22,6 @@ public class StudentDAO {
 		return studentList.stream().filter(a -> a.getEnrollcode().equals(enrollcode)).findAny().orElse(null);
 	}
 	
-	public Student getByEmail(String email) {
-		
-		List<Student> studentList = retrieveSpreadsheet().getEntityList();
-		
-		return studentList.stream().filter(a -> a.getEmail().equals(email)).findAny().orElse(null);
-	}
-	
 	public List<Student> getAll() {
 		
 		return retrieveSpreadsheet().getEntityList();

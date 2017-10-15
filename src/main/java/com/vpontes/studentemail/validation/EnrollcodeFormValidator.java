@@ -33,7 +33,7 @@ public class EnrollcodeFormValidator implements Validator{
 			erros.rejectValue("enrollcode",	"field.notFound");
 		else if(!student.getActive())
 			erros.rejectValue("enrollcode",	"field.notActive");
-		else if(student.getUffmail() != null || !student.getUffmail().isEmpty())
+		else if(!student.getUffmail().isEmpty())
 			erros.rejectValue("enrollcode",	"field.HasUFFMail");
 	}
 
