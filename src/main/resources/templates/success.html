@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Sucesso</title>
+</head>
+<body>
+	<h1>Pronto !</h1>
+
+	<p th:utext="#{success.message(${user.name}, ${user.uffmail}, ${user.phone})}"></p>
+
+	
+</body>
+</html>

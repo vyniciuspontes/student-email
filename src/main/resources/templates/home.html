@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Criar UFFMail</title>
+</head>
+<body>
+	<h1>Digite sua matricula</h1>
+	<form action="#" th:action="@{/createUFFMail}" th:object="${enrollcodeForm}" method="post">
+		<table>
+			<tr>
+				<td>Matricula:</td>
+				<p th:text="#{home.welcome}"></p>
+				<td><input type="text" th:field="*{enrollcode}" /></td>
+				<td th:if="${#fields.hasErrors('enrollcode')}" th:errors="*{enrollcode}">Title error message</td>
+			</tr>
+			<tr>
+				<td><button type="submit">Enviar</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

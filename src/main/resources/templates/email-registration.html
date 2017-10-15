@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Email Register</title>
+</head>
+<body>
+	<h1>Cadastre Seu Email</h1>
+	<form action="#" th:action="@{/registerUFFMail}" th:object="${emailRegistrationForm}" method="post">
+		<table>
+			<tr>
+				<td>Email:</td>
+				<select th:field="*{selectedEmail}">
+				  <option th:each="email : *{emailSuggestions}" 
+				          th:value="${email}" 
+				          th:text="${email}">Wireframe</option>
+				</select>
+				<input type="hidden" th:field="*{enrollcode}" />
+			</tr>
+			<tr>
+				<td><button type="submit">Submit post</button></td>
+			</tr>
+		</table>
+	</form>
+	
+</body>
+</html>
