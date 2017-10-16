@@ -8,13 +8,13 @@
 <body>
 	<div class="container">
 		<div>
-			<h1>Cadastre Seu Email</h1>
+			<h1>Cadastro UFFMail <small> Dev</small></h1>
 		</div>
 		<div>
 			<form action="#" th:action="@{/registerUFFMail}"
 				th:object="${emailRegistrationForm}" method="post">
 				<div class="form-group">
-				<label for="selectEmail">Selecione um email</label> <select style="width: 300px"
+				<label for="selectEmail">Selecione um email</label> <select style="width: 300px; height: 45px;"
 					class="form-control" id="selectEmail" th:field="*{selectedEmail}">
 					<option th:each="email : *{emailSuggestions}" th:value="${email}"
 						th:text="${email}">Wireframe</option>
@@ -25,6 +25,6 @@
 			</form>
 		</div>
 	</div>
-	<div th:replace="fragments/footer :: footer"/>
+	
 </body>
 </html>

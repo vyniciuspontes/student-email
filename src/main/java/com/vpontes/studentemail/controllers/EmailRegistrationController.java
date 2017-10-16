@@ -19,7 +19,7 @@ import com.vpontes.studentemail.services.StudentService;
 @Controller
 public class EmailRegistrationController {
 
-	@RequestMapping(value = "/emailRegistration", method = RequestMethod.GET)
+	@RequestMapping(value = "/selectUFFMail", method = RequestMethod.GET)
 	public String index(Map<String, Object> model, RedirectAttributes redirectattributes) {
 
 		EmailRegistrationForm form = new EmailRegistrationForm();

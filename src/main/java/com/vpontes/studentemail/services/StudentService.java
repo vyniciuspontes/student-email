@@ -23,14 +23,16 @@ public class StudentService {
 
 		if(splitedName.length > 1) {
 			suggestions.add(splitedName[0] + "_" + splitedName[1] + "@id.uff.br");
+			suggestions.add(splitedName[0] + "." + splitedName[1] + "@id.uff.br");
 			suggestions.add(splitedName[0].charAt(0)+  splitedName[1] + "@id.uff.br");
 			suggestions.add(splitedName[0] + splitedName[1].charAt(0) + "@id.uff.br");
 		}
 		
 		if(splitedName.length > 2) {
-			suggestions.add(splitedName[0] + "_" + splitedName[1] + "_" + splitedName[2] + "@id.uff.br");
 			suggestions.add(splitedName[0].charAt(0)+  splitedName[2] + "@id.uff.br");
 			suggestions.add(splitedName[0] + splitedName[2].charAt(0) + "@id.uff.br");
+			suggestions.add(splitedName[0] + "_" + splitedName[2] + "@id.uff.br");
+			suggestions.add(splitedName[0] + "." + splitedName[2] + "@id.uff.br");
 		}
 		
 		//removendo emails existentes da sugestao

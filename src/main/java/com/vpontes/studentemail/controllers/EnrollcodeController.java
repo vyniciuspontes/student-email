@@ -42,6 +42,6 @@ public class EnrollcodeController {
 		
 		redirectAttributes.addFlashAttribute("enrollcode", enrollcodeForm.getEnrollcode());
 		
-		return "redirect:/emailRegistration";
+		return "redirect:/selectUFFMail";
 	}
 }
