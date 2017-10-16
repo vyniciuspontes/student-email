@@ -2,7 +2,7 @@
 
 O projeto utiliza o Springboot na IDE Spring Tool Suite. Feito com o JDK 8.
 
-Para executar o projeto basta abri-lo na IDE Spring Tool Suite > clicar com o botão direito encima da pasta do projeto > Run As > Spring Boot App 
+Para executar o projeto basta abri-lo na IDE Spring Tool Suite > clicar com o botão direito em cima da pasta do projeto > Run As > Spring Boot App 
 
 Ou
 
